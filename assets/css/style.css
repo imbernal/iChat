@@ -1,0 +1,317 @@
+body{
+  margin: 0;
+}
+
+.loginMainContainer{
+  max-width: 450px;
+  display: flex;
+  height: 100vh;
+  background-color: #669166;
+  flex-direction: column;
+}
+
+.loginHeader{
+  width: 100%;
+  flex: 1;
+  background: #80efce;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#messageHeader{
+  background: transparent !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 8px;
+  padding-right: 8px;
+
+}
+
+#messageHeader span{
+  font-size: 35px !important;
+  color: #b8a6e4;
+}
+
+#messageHeader i{
+  font-size: 17px;
+  color: #b8a6e4;
+  cursor: pointer;
+}
+
+.loginHeader span{
+  font-size: 70px;
+
+  color:#494a4a;
+  font-family: "Song jennifer";
+}
+
+.loginHeader  .animationI{
+
+  font-weight: lighter;
+  animation: changeIColor 1.5s cubic-bezier(0.01, 1.32, 1, 1) infinite;
+  animation-direction: alternate;;
+}
+
+
+.headerData{
+  position: relative;
+}
+
+.headerData i{
+
+  position: absolute;
+  font-size: 50px;
+  top: -41%;
+  right: 0;
+  color: white;
+}
+
+.loginFooter{
+  display: flex;
+  background: black;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.titleSocial{
+  flex:1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.socialIcons{
+  flex: 1;
+  display: flex;
+  width: 100%;
+}
+
+
+
+.facebook{
+    width: 70%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.facebook i{
+    color: #3b5998;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.google{
+  width: 70%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.google img{
+  width: 30px;
+  height: 30px;
+}
+
+
+.instagram{
+  width: 70%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.instagram i{
+  color: #CD486B;
+  font-size: 35px;
+}
+
+.titleSocial p{
+  font-family: "28 Days Later";
+  font-size: 40px;
+}
+
+@keyframes changeIColor {
+  0%{ color: #494a4a}
+  100%{ color:white }
+}
+
+@font-face{
+  font-family: "Song jennifer";
+  font-style: normal;
+
+  src: local("a song for jennifer") , url("../fonts/a song for jennifer.ttf");
+
+}
+
+@font-face{
+  font-family: "28 Days Later";
+  font-style: normal;
+
+  src: local("28 Days") , url("../fonts/28 Days Later.ttf");
+}
+
+
+@font-face {
+  font-family: "Comforta";
+  font-style:italic;;
+  src: local("Comforta"), url("../fonts/Comforta.ttf");
+}
+
+/*Messages Styles*/
+
+.messagesContainer{
+  max-width: 350px;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow:4px 0px 5px #888888
+}
+
+.headerMessages , .sendMessages{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerMessages{
+  border-bottom: 1px solid rgba(160, 160, 160, 0.74);
+  font-family: "Comforta";
+}
+
+.messages{
+  display: flex;
+  flex:7;
+  flex-direction: column;
+  margin-top: 26px;
+  padding-left: 12px;
+  height: 145px;
+  width: 80%;
+}
+
+.eachMessage{
+  display: flex;
+  /*flex: 1;*/
+  margin-bottom: 18px;
+  max-height: auto;
+}
+
+.eachMessage .picture{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;;
+  flex:2;
+}
+
+.eachMessage .message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex:7;
+  background-color: #7be8c8;
+  color: black;
+  margin-right: 14px;
+  /*border-radius: 4%;*/
+}
+
+.message p{
+  width: 80%;
+  padding-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Comforta";
+}
+
+.message p span{
+  float: right;
+  font-family: "Comforta";
+
+}
+
+.picture img{
+  height: 40px;
+  width: 40px;
+  margin-bottom: 0px;
+}
+
+.sendMessages{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.sendMessages .iconAdd{
+  color:#b8a6e4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex:1;
+}
+
+.sendMessages textarea{
+  max-width: 350px;
+  color:black;
+  border:none;
+  flex:5;
+  resize: none;
+  font-family: "Comforta";
+}
+
+.sendMessages textarea:focus{
+  overflow: hidden;
+  outline:none;
+}
+
+.sendIcon{
+
+  position: absolute;
+  top: -26px;
+  right: 13px;
+  border-radius: 50%;
+  background: #b8a6e4;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  box-shadow: 0px 10px 20px 0px rgba(88, 88, 88, 0.91);
+  cursor: pointer;
+}
+
+
+textarea::-webkit-input-placeholder {
+    padding-top: 10px;
+
+}
+textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: red;
+    text-align: center;
+}
+textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: red;
+    text-align: center;
+}
+textarea:-ms-input-placeholder {
+    color: red;
+    text-align: center;
+}

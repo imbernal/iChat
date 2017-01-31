@@ -1,0 +1,41 @@
+<div class="messagesContainer">
+    <div class="headerMessages">
+      <header id="messageHeader" class="loginHeader">
+        <div class="headerData">
+          <!-- <i class="fa fa-commenting-o"></i> -->
+          <span><strong class="animationI">i</strong>Chat</span>
+        </div>
+        <i ng-click="logout()" class="fa fa-sign-out" aria-hidden="true"></i>
+      </header>
+    </div>
+
+    <div class="messages">
+      <div class="eachMessage" ng-repeat="msg in messages">
+
+        <div class="picture">
+
+          <img class="img-responsive img-circle" ng-src="{{msg.userProfile}}" alt="User picture">
+
+        </div>
+        <div class="message">
+          <p>{{msg.message}}
+            <br>
+            <span>{{msg.hour | date : mediumTime}} </span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sendMessages">
+      <div ng-click="saveMessage()" class="sendIcon">
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+      </div>
+
+      <div class="iconAdd">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+      </div>
+
+        <textarea name="name" id ="textarea" placeholder="Type a message..." cols="80"></textarea>
+    </div>
+
+</div>
